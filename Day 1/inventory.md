@@ -47,7 +47,9 @@ web
 db
 ```
 
-### Static Inventory (YAML Formal)
+## 📄 Static Inventory (YAML Format)
+
+### 🧪 Basic Example
 
 ```
 all:
@@ -86,5 +88,7 @@ include_vm_resource_groups:
   - myResourceGroup
 auth_source: auto
 ```
+
+
 
 
