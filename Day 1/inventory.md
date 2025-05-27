@@ -45,3 +45,24 @@ ansible_ssh_private_key_file=~/.ssh/id_rsa
 [production:children]
 web
 db
+```
+
+### Static Inventory (YAML Formal)
+
+```
+all:
+  children:
+    web:
+      hosts:
+        web1:
+          ansible_host: 192.168.1.10
+          ansible_user: ubuntu
+        web2:
+          ansible_host: 192.168.1.11
+          ansible_user: ubuntu
+    db:
+      hosts:
+        db1:
+          ansible_host: 192.168.1.12
+          ansible_user: root
+```
