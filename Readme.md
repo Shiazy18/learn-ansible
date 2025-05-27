@@ -1,4 +1,4 @@
-# Learn Ansiblt
+# Learn Ansible
 
 Day 1: Introduction to Ansible and Getting Started
 
