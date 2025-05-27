@@ -66,3 +66,24 @@ all:
           ansible_host: 192.168.1.12
           ansible_user: root
 ```
+
+### Dynamic Inventory 
+
+**Dynamic inventory** is generated at runtime using scripts or plugins that fetch host info from external systems like:
+- AWS EC2
+- Azure Resource Manager
+- GCP
+- VMware, OpenStack, etc.
+
+### 🔹 Example: Azure Dynamic Inventory Plugin
+
+### yaml
+
+```
+plugin: azure_rm
+include_vm_resource_groups:
+  - myResourceGroup
+auth_source: auto
+```
+
+
