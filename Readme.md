@@ -5,10 +5,18 @@ Day 1: Introduction to Ansible and Getting Started
 - Overview of Ansible: What is Ansible, its advantages, and why use it?
 - Comparison with Shell and Python scripting for automation.
 - Ansible vs other Configuration Management tools
-- Terraform and Ansible
 - Installing Ansible on different platforms.
 - Inventory files – Static vs Dynamic
-- Ad-hoc commands
+
+Day 2: 
+
+- Terraform and Ansible
+- Playbook basics and YAML syntax
+- Variables & Facts
+- Conditionals & Loops
+- Handlers
+- Templates using Jinja2
+- Tags in Playbooks
 
 
 
