@@ -10,7 +10,6 @@ Day 1: Introduction to Ansible and Getting Started
 
 Day 2: 
 
-- Terraform and Ansible
 - Playbook basics and YAML syntax
 - Variables & Facts
 - Conditionals & Loops
