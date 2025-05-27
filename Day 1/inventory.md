@@ -29,6 +29,7 @@ web2 ansible_host=192.168.1.11 ansible_user=ubuntu
 
 [db]
 db1 ansible_host=192.168.1.12 ansible_user=root
+```
 
 ### Group varibales
 
@@ -36,6 +37,7 @@ db1 ansible_host=192.168.1.12 ansible_user=root
 [web:vars]
 ansible_user=ubuntu
 ansible_ssh_private_key_file=~/.ssh/id_rsa
+```
 
 ### Nested Group 
 
