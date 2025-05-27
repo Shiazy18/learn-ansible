@@ -66,6 +66,7 @@ all:
           ansible_host: 192.168.1.12
           ansible_user: root
 ```
+---
 
 ### Dynamic Inventory 
 
