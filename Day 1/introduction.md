@@ -64,9 +64,10 @@ Today’s focus: Understanding what Ansible is, how it compares with other tools
 
 ---
 
-### 💻 5. Installing Ansible
 
-#### On Ubuntu/Debian:
-```bash
-sudo apt update
-sudo apt install ansible -y
+
+
+
+
+
+
