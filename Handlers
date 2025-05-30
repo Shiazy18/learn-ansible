@@ -1,0 +1,43 @@
+# 🚦 Handlers in Ansible
+
+---
+
+## What are Handlers?
+
+Handlers are special tasks that **run only when notified** by another task. They are typically used to perform actions that should occur only if a change is made — for example, restarting a service only if a configuration file changes.
+
+Think of them as “delayed reactions” triggered when needed.
+
+---
+
+## Why use Handlers?
+
+- Prevent unnecessary restarts or reloads.
+- Ensure services are only impacted when changes are actually made.
+- Improve performance and idempotency.
+
+---
+
+## Basic Handler Example
+
+```yaml
+- name: Install and configure Apache
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+
+    - name: Update config file
+      copy:
+        src: apache.conf
+        dest: /etc/apache2/apache2.conf
+      notify: Restart Apache
+
+  handlers:
+    - name: Restart Apache
+      service:
+        name: apache2
+        state: restarted
