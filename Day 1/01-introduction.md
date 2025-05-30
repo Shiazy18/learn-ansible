@@ -1,20 +1,22 @@
-# 📘 Day 1 - Getting Started with Ansible
- 
+# Day 1 - Getting Started with Ansible
+
 Today’s focus: Understanding what Ansible is, how it compares with other tools, and how to get started with basic usage.
 
 ---
 
-## 📌 Topics Covered
+## Topics Covered
 
-### ✅ 1. Overview of Ansible
+### 1. Overview of Ansible
 
 **Ansible** is an open-source automation tool used for:
+
 - Configuration management
 - Application deployment
 - Task automation (cron, package installs, user management)
 - Cloud provisioning (e.g., Azure, AWS)
 
 **Advantages:**
+
 - Agentless (uses SSH/WinRM)
 - Human-readable YAML syntax
 - Easy to learn
@@ -35,7 +37,7 @@ Today’s focus: Understanding what Ansible is, how it compares with other tools
 
 ---
 
-### 🧰 3. Ansible vs Other Tools
+### 3. Ansible vs Other Tools
 
 | Tool      | Agentless | Language | Cloud Native Support | Learning Curve |
 |-----------|-----------|----------|----------------------|----------------|
@@ -59,15 +61,7 @@ Today’s focus: Understanding what Ansible is, how it compares with other tools
 | Idempotency            | ✅                 | ✅                     |
 | Use Together?          | ✅ Yes             | ✅ Yes                 |
 
-📌 **Use Terraform to provision infrastructure (VMs, networks)**  
-📌 **Use Ansible to configure it (install packages, set permissions, etc.)**
+ **Use Terraform to provision infrastructure (VMs, networks)**  
+**Use Ansible to configure it (install packages, set permissions, etc.)**
 
 ---
-
-
-
-
-
-
-
-

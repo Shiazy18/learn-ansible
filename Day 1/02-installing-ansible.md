@@ -1,7 +1,9 @@
-### 💻 Installing Ansible
+# Installing Ansible
 
+<https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html>
 
-#### On Ubuntu/Debian:
+## On Ubuntu/Debian
+
 ```bash
 sudo apt update
 sudo apt install ansible -y
