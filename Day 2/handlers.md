@@ -1,4 +1,4 @@
-# 🚦 Handlers in Ansible
+# Handlers in Ansible
 
 ---
 
