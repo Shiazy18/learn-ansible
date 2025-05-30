@@ -1,14 +1,14 @@
-# 📒 Playbook Basics and YAML Syntax
+# Playbook Basics and YAML Syntax
 
 Ansible Playbooks are the core of automation — they define tasks to run on target hosts.
 
-## 🧾 Basic YAML Syntax
+## Basic YAML Syntax
 
 - Uses `.yml` or `.yaml` extension
 - Indentation matters (use spaces, not tabs)
 - Key-value pairs and lists
 
-## ▶️ Sample Playbook
+## Sample Playbook
 
 ```yaml
 ---
