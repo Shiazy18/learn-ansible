@@ -8,7 +8,7 @@ Day 1: Introduction to Ansible and Getting Started
 - Installing Ansible on different platforms.
 - Inventory files – Static vs Dynamic
 
-Day 2: 
+Day 2:
 
 - Playbook basics and YAML syntax
 - Variables & Facts
@@ -16,6 +16,3 @@ Day 2:
 - Handlers
 - Templates using Jinja2
 - Tags in Playbooks
-
-
-
