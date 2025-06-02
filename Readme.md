@@ -11,8 +11,8 @@ Day 1: Introduction to Ansible and Getting Started
 Day 2:
 
 - Playbook basics and YAML syntax
+- Templates using Jinja2
 - Variables & Facts
 - Conditionals & Loops
 - Handlers
-- Templates using Jinja2
 - Tags in Playbooks
