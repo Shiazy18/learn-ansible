@@ -8,7 +8,7 @@ Ansible Playbooks are the core of automation — they define tasks to run on tar
 - Indentation matters (use spaces, not tabs)
 - Key-value pairs and lists
 
-## ▶️ Sample Playbook
+## Sample Playbook
 
 ```yaml
 ---
