@@ -8,11 +8,21 @@ Day 1: Introduction to Ansible and Getting Started
 - Installing Ansible on different platforms.
 - Inventory files – Static vs Dynamic
 
-Day 2:
+Day 2: Playbooks
 
 - Playbook basics and YAML syntax
+- Templates using Jinja2
 - Variables & Facts
 - Conditionals & Loops
 - Handlers
-- Templates using Jinja2
 - Tags in Playbooks
+
+Day 3: Ansible Modules
+
+- What are Ansible Modules?
+- Types of Ansible Modules
+- How Modules Work (under the hood)
+- Commonly Used Core Modules: file, copy, template, command, shell, debug, lineinfile, stat
+- User Management (user, authorized_key)
+- Package Management (apt, yum, dnf)
+- Service Management (service, systemd)
