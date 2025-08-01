@@ -21,8 +21,21 @@ Day 3: Ansible Modules
 
 - What are Ansible Modules?
 - Types of Ansible Modules
+- Commonly Used Modules
 - How Modules Work (under the hood)
-- Commonly Used Core Modules: file, copy, template, command, shell, debug, lineinfile, stat
-- User Management (user, authorized_key)
-- Package Management (apt, yum, dnf)
-- Service Management (service, systemd)
+
+Day 4: Advanced Concepts
+
+- Roles (and Ansible Galaxy)
+- Vault (for secrets management)
+- Custom modules
+- Lookups and Filters
+- Using facts and register variables
+
+Dy 5: Real-World Use Cases
+
+- Install Nginx/Apache and configure
+- User and SSH key setup for multiple servers
+- Automating Docker install and container deployment
+- System hardening
+- Infrastructure provisioning with cloud modules (Azure, AWS)
