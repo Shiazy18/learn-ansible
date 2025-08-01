@@ -116,7 +116,7 @@ Below is a categorized summary of commonly used Ansible module types:
 
 ---
 
-## 📎 Useful Links
+## Useful Links
 
 - [Ansible Built-in Modules](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html)
 - [Community Collections on Galaxy](https://galaxy.ansible.com/)
