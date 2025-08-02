@@ -1,118 +1,126 @@
-# Lookups and Filters in Ansible
+# Facts and Register in Ansible
 
-Ansible provides **lookups** and **filters** to fetch external data and transform variables, making playbooks dynamic and powerful.
+Ansible provides mechanisms to **gather system information** (facts) and **store task results** (register) for use in later tasks. These features allow playbooks to make dynamic decisions.
 
 ---
 
-## Lookups
+## What are Ansible Facts?
 
-Lookups **pull in data from outside Ansible**, such as files, environment variables, or secrets.
+Facts are **system properties** collected from managed hosts (OS, IP, memory, etc.) using the `setup` module.
 
-### Syntax
+---
 
-```yaml
-{{ lookup('plugin_name', 'term') }}
+### View All Facts
+
+```bash
+ansible all -m setup
+```
+
+Or to filter specific facts:
+
+```bash
+ansible all -m setup -a 'filter=ansible_distribution*'
 ```
 
 ---
 
-### Common Lookup Plugins
-
-| Plugin         | Description                                 | Example                                      |
-|----------------|---------------------------------------------|----------------------------------------------|
-| `file`         | Read content from a local file              | `{{ lookup('file', 'secret.txt') }}`         |
-| `env`          | Get environment variable                    | `{{ lookup('env', 'HOME') }}`                |
-| `password`     | Generate or retrieve a password             | `{{ lookup('password', '/tmp/pwdfile') }}`   |
-| `pipe`         | Run a shell command                         | `{{ lookup('pipe', 'date') }}`               |
-| `csvfile`      | Lookup values from a CSV file               | `{{ lookup('csvfile', 'key file=map.csv') }}`|
-
----
-
-### Lookup Example in Playbook
+### Using Facts in Playbooks
 
 ```yaml
-- name: Using lookups
-  hosts: localhost
-  vars:
-    secret_value: "{{ lookup('file', 'secret.txt') }}"
+- name: Display OS info
+  hosts: all
   tasks:
-    - debug:
-        msg: "The secret is: {{ secret_value }}"
+    - name: Show OS family
+      debug:
+        msg: "This system is based on {{ ansible_os_family }}"
+```
+
+📝 Facts are available as variables with the `ansible_` prefix.
+
+---
+
+## Using `gather_facts`
+
+By default, `gather_facts` is `true`. You can turn it off to speed up execution when facts aren’t needed.
+
+```yaml
+- hosts: all
+  gather_facts: false
 ```
 
 ---
 
-## Filters
+## Registering Task Results
 
-Filters are used to **modify or transform** variable values. They are based on Jinja2 filters and can be chained.
-
-### 🛠️ Syntax
-
-```yaml
-{{ variable | filter_name }}
-{{ variable | filter1 | filter2 }}
-```
+The `register` keyword lets you **capture output** of a task into a variable.
 
 ---
 
-### Common Filters
-
-| Filter        | Description                           | Example                                     |
-|---------------|---------------------------------------|---------------------------------------------|
-| `default`     | Set default if variable is undefined  | `{{ myvar | default('default_value') }}`    |
-| `upper`       | Convert to uppercase                  | `{{ 'hello' | upper }}`                     |
-| `lower`       | Convert to lowercase                  | `{{ 'HELLO' | lower }}`                     |
-| `replace`     | Replace string patterns               | `{{ 'abc' | replace('a','z') }}`            |
-| `join`        | Join list into string                 | `{{ ['a', 'b'] | join(',') }}`              |
-| `unique`      | Remove duplicates from list           | `{{ [1,2,2,3] | unique }}`                  |
-| `length`      | Get length of list/string             | `{{ mylist | length }}`                     |
-| `dict2items`  | Convert dict to list of items         | `{{ mydict | dict2items }}`                 |
-
----
-
-### Filter Example in Playbook
+### Basic Example
 
 ```yaml
-- name: Using filters
+- name: Register output
   hosts: localhost
-  vars:
-    name: "shivam"
   tasks:
-    - debug:
-        msg: "Uppercase name: {{ name | upper }}"
+    - name: Run a command
+      command: "uname -r"
+      register: kernel_result
+
+    - name: Show result
+      debug:
+        var: kernel_result.stdout
 ```
 
 ---
 
-## Combining Lookups and Filters
+### Structure of Registered Variable
+
+The registered variable is a dictionary containing keys like:
+
+- `stdout`, `stderr`
+- `rc` (return code)
+- `stdout_lines`, `stderr_lines`
+- `changed`
+
+You can access any of these for conditions or logic.
+
+---
+
+### Example: Conditional Task with Register
 
 ```yaml
-- name: Lookup + filter
-  hosts: localhost
-  vars:
-    file_contents: "{{ lookup('file', 'sample.txt') | upper }}"
+- name: Conditional restart
+  hosts: all
   tasks:
-    - debug:
-        msg: "Contents: {{ file_contents }}"
+    - name: Check if service is active
+      shell: systemctl is-active nginx
+      register: nginx_status
+      ignore_errors: true
+
+    - name: Restart nginx if inactive
+      service:
+        name: nginx
+        state: restarted
+      when: nginx_status.stdout != "active"
 ```
 
 ---
 
 ## Tips
 
-- Use `default` filter to avoid undefined variable errors.
-- You can chain filters to transform data step by step.
-- Lookup plugins are **only executed on the control node**.
+- Registered variables are local to the host they are run on.
+- Use `debug` to inspect registered variables during development.
+- You can chain with `with_items` or `loop` for multiple result handling.
 
 ---
 
 ## Summary
 
-| Concept | Purpose                          | Executed On     |
-|--------|----------------------------------|-----------------|
-| Lookup | Fetch external/local data        | Control Node    |
-| Filter | Transform variable values        | Managed Node    |
+| Feature      | Purpose                             | Used For                        |
+|--------------|-------------------------------------|---------------------------------|
+| Facts        | Gather system info from hosts       | OS, IP, Memory, Disk, etc.      |
+| Register     | Store task output for later use     | Logic, conditions, debugging    |
 
 ---
 
-Mastering lookups and filters helps you write **cleaner, more dynamic** playbooks that adapt to real-world use cases.
+Mastering facts and register helps you make playbooks that are **context-aware** and **intelligent**, adapting to any environment!

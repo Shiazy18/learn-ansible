@@ -40,7 +40,7 @@ Welcome to **Day 4** of your Ansible learning journey! Today we’ll dive into m
 - Dynamically fetch data from files, environment variables, or external sources using **lookups**.
 - Use **filters** to transform variables (e.g., to_upper, regex, join, etc.).
 
-➡️ Refer: [04-Lookups_Filters.md](./04-Lookups_Filters.md)
+➡️ Refer: [04-Lookups_Filters.md](./04-Lookups_filters.md)
 
 ---
 
