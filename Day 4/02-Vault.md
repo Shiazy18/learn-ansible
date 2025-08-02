@@ -12,7 +12,7 @@ Ansible Vault is a feature that allows you to **secure sensitive data** such as 
 
 ---
 
-## 🔧 Basic Commands
+## Basic Commands
 
 ### Encrypt a file
 

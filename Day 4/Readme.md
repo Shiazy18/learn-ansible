@@ -12,7 +12,7 @@ Welcome to **Day 4** of your Ansible learning journey! Today we’ll dive into m
 - Break down your tasks, variables, handlers, and templates into reusable components.
 - Scaffold roles using `ansible-galaxy init`.
 
-➡️ Refer: [01-Roles.md](./Roles.md)
+➡️ Refer: [01-Roles.md](./01-Roles.md)
 
 ---
 
@@ -22,7 +22,7 @@ Welcome to **Day 4** of your Ansible learning journey! Today we’ll dive into m
 - Learn to encrypt and decrypt files.
 - Use vaults within your playbooks and roles.
 
-➡️ Refer: [02-Vault.md](./Vault.md)
+➡️ Refer: [02-Vault.md](./02-Vault.md)
 
 ---
 
@@ -31,7 +31,7 @@ Welcome to **Day 4** of your Ansible learning journey! Today we’ll dive into m
 - Understand how Ansible modules work under the hood.
 - Learn to write your own custom Python modules if required for special use cases.
 
-➡️ Refer: [03-Custom_Modules.md](./custom_modules.md)
+➡️ Refer: [03-Custom_Modules.md](./03-Custom_Modules.md)
 
 ---
 
@@ -40,7 +40,7 @@ Welcome to **Day 4** of your Ansible learning journey! Today we’ll dive into m
 - Dynamically fetch data from files, environment variables, or external sources using **lookups**.
 - Use **filters** to transform variables (e.g., to_upper, regex, join, etc.).
 
-➡️ Refer: [04-Lookups_Filters.md](./lookups_filters.md)
+➡️ Refer: [04-Lookups_Filters.md](./04-Lookups_Filters.md)
 
 ---
 
@@ -49,7 +49,7 @@ Welcome to **Day 4** of your Ansible learning journey! Today we’ll dive into m
 - Use **facts** to gather system information dynamically.
 - Capture output of tasks using **register** and use it for conditional logic and dynamic tasks.
 
-➡️ Refer: [05-Facts_Register.md](./facts_register.md)
+➡️ Refer: [05-Facts_Register.md](./05-Facts_Register.md)
 
 ---
 
