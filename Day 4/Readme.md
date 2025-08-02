@@ -49,7 +49,7 @@ Welcome to **Day 4** of your Ansible learning journey! Today we’ll dive into m
 - Use **facts** to gather system information dynamically.
 - Capture output of tasks using **register** and use it for conditional logic and dynamic tasks.
 
-➡️ Refer: [05-Facts_Register.md](./05-Facts_Register.md)
+➡️ Refer: [05-Facts_Register.md](./05-Facts_register.md)
 
 ---
 
