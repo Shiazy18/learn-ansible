@@ -90,8 +90,10 @@ ansible-playbook playbook.yml --tags my_block
 
 | Feature | Description |
 |--|--|
-| block | Groups multiple tasks |
-| rescue| Tasks to run if the block fails |
-| always | Tasks that run regardless of block success/failure |
-| tags | Apply tags to multiple tasks |
-| when, become | Apply conditions or privilege escalation to all tasks in the block |
+| `block` | Groups multiple tasks |
+| `rescue`| Tasks to run if the block fails |
+| `always` | Tasks that run regardless of block success/failure |
+| `tags` | Apply tags to multiple tasks |
+| `when`, `become` | Apply conditions or privilege escalation to all tasks in the block |
+
+Use blocks for better readability, reusability, and error management in playbooks.
