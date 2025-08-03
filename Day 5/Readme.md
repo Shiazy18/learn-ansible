@@ -49,7 +49,6 @@ Use dynamic sources like cloud APIs or scripts to populate the inventory dynamic
 ---
 
 ## Files in This Day
-[01-Roles.md](./01-Roles.md)
 
 | File Name               | Description                                |
 |------------------------|--------------------------------------------|
@@ -60,7 +59,7 @@ Use dynamic sources like cloud APIs or scripts to populate the inventory dynamic
 
 ---
 
-## 🚀 Outcome
+## Outcome
 
 By the end of Day 5, you'll be able to:
 
@@ -68,8 +67,6 @@ By the end of Day 5, you'll be able to:
 - Write resilient playbooks that don’t crash on every error
 - Manage inventory for large, cloud-based infrastructure setups
 
-> 🎯 **Level up your automation game by making it dynamic, reusable, and resilient!**
+> **Level up your automation game by making it dynamic, reusable, and resilient!**
 
 ---
-
-🔜 Ready? Let’s begin with [jinja2_templating.md](jinja2_templating.md) 🔧

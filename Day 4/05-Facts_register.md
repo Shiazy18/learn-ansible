@@ -35,7 +35,7 @@ ansible all -m setup -a 'filter=ansible_distribution*'
         msg: "This system is based on {{ ansible_os_family }}"
 ```
 
-📝 Facts are available as variables with the `ansible_` prefix.
+Facts are available as variables with the `ansible_` prefix.
 
 ---
 
