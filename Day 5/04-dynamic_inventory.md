@@ -105,3 +105,10 @@ Then run:
 | Scalable  | Supports hundreds/thousands of instances |
 | Flexible  | Easily integrates with cloud providers   |
 
+## 8. Summary
+
+- Use dynamic inventory to integrate real-time infrastructure.
+- Script-based or plugin-based (e.g., AWS, Azure, GCP).
+- Great for scalable and ephemeral environments.
+
+Recommended for production environments using cloud-based resources.
