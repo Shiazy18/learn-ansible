@@ -20,7 +20,7 @@ Jinja2 is a powerful templating engine used by Ansible to dynamically generate c
 | Variable            | `{{ variable_name }}`                |
 | If Statement        | `{% if condition %} ... {% endif %}` |
 | For Loop            | `{% for item in list %} ... {% endfor %}` |
-| Filter              | `{{ variable | filter }}`            |
+| Filter              | `{{ variable \| filter }}`            |
 
 ---
 
