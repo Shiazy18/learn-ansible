@@ -86,6 +86,12 @@ Then you can run with:
 ansible-playbook playbook.yml --tags my_block
 ```
 
+## Summary
 
-
-
+| Feature | Description |
+|--|--|
+| block | Groups multiple tasks |
+| rescue| Tasks to run if the block fails |
+| always | Tasks that run regardless of block success/failure |
+| tags | Apply tags to multiple tasks |
+| when, become | Apply conditions or privilege escalation to all tasks in the block |
