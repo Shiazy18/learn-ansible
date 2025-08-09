@@ -1,0 +1,7 @@
+---
+- name: Ping Azure VMs
+  hosts: azure_vm
+  gather_facts: no
+  tasks:
+    - name: Ping the host
+      ansible.builtin.ping:
